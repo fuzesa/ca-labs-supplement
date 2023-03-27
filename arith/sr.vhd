@@ -3,15 +3,15 @@ library ieee;
   use ieee.std_logic_arith.all;
   use ieee.std_logic_unsigned.all;
 
-entity sl is
+entity sr is
   port (
     clk : in    std_logic;
     di  : in    std_logic_vector(3 downto 0);
     do  : out   std_logic_vector(3 downto 0)
   );
-end entity sl;
+end entity sr;
 
-architecture rtl of sl is
+architecture rtl of sr is
 
 begin
 
