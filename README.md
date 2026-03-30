@@ -98,7 +98,7 @@ architecture rtl of latch_async_set_reset is
 
 begin
 
-  latch_async_set_reset_proc : process (en) is
+  latch_async_set_reset_proc : process (reset, set, en) is
   begin
 
     if (reset='1') then
@@ -335,8 +335,7 @@ begin
       when   "00" => o <= a;
       when   "01" => o <= b;
       when   "10" => o <= c;
-      when   "11" => o <= d;
-      when others => o <= a;
+      when   "11" => o <= d;      
     end case;
 
   end process four_to_one_mux_proc;
